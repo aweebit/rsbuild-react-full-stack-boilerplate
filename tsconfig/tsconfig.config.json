@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "types": [
+      "arktype",
+      "node",
+      "eslint",
+      "globals",
+      "@eslint/js",
+      "typescript-eslint",
+      "eslint-config-prettier",
+      "eslint-plugin-react-hooks",
+      "eslint-plugin-react-refresh",
+      "@rsbuild/core",
+      "@rsbuild/plugin-react",
+      "@rsbuild/plugin-type-check",
+      "@trivago/prettier-plugin-sort-imports"
+    ]
+  },
+  "include": ["../*.ts", "../*.js", "../rsbuild"]
+}

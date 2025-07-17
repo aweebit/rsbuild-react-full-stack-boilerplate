@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "types": ["arktype"],
+    "skipLibCheck": true,
+    "checkJs": true,
+
+    /* Build: */
+    "rootDir": "..",
+    "outDir": "../node_modules/.tmp",
+    "noEmit": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "incremental": true,
+
+    /* Language: */
+    "useDefineForClassFields": true,
+    "erasableSyntaxOnly": true,
+    "jsx": "react-jsx",
+
+    /* Modules: */
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "$shared/*": ["../shared/*"]
+    },
+
+    /* Strictness: */
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+    "noUnusedLocals": true
+  }
+}

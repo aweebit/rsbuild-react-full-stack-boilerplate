@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+#root {
+  white-space: pre-wrap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  white-space: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.hidden {
+  display: none !important;
+}

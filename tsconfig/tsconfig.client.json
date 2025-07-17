@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable", "DOM.AsyncIterable"],
+    "types": [
+      "arktype",
+      "@rsbuild/core/types",
+      "react",
+      "react-dom",
+      "@aweebit/react-essentials"
+    ]
+  },
+  "include": ["../client"],
+  "exclude": ["../client/dist"],
+  "references": [{ "path": "./tsconfig.shared.json" }]
+}
