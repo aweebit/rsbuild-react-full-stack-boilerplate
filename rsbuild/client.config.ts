@@ -1,3 +1,4 @@
+import { env } from '../loadEnv';
 import { common } from './common';
 import {
   type EnvironmentConfig,
@@ -26,7 +27,12 @@ export const client: EnvironmentConfig = mergeRsbuildConfig(common, {
 });
 
 export default mergeRsbuildConfig<RsbuildConfig>(client, {
-  server: { port: 5555 },
+  server: {
+    port: 5555,
+    proxy: {
+      '/api': `http://localhost:${env.PUBLIC_PORT}`,
+    },
+  },
   plugins: [
     pluginTypeCheck({
       tsCheckerOptions: {

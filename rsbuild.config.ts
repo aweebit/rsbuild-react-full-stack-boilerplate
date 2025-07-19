@@ -1,3 +1,4 @@
+import { env } from './loadEnv';
 import { client } from './rsbuild/client.config';
 import { common } from './rsbuild/common';
 import { server } from './rsbuild/server.config';
@@ -13,7 +14,10 @@ export default mergeRsbuildConfig<RsbuildConfig>(common, {
       },
     }),
   ],
-  server: { port: 5555 },
+  server: {
+    port: 5555,
+    proxy: { '/api': `http://localhost:${env.PUBLIC_PORT}` },
+  },
   environments: {
     client,
     server,
